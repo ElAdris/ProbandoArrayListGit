@@ -15,6 +15,13 @@ public abstract class Persona extends Claves implements Comparable<Persona> {
     private String nombre;
     private String dni;
     
+    /**
+     * En el constructor se genera la clave de la persona, en base a su nombre
+     * y hashCode de su nombre.
+     * @param nombre
+     * @param dni 
+     * @see asignarClave(String dni, String clave)
+     */
     public Persona(String nombre, String dni) {
         this.nombre = nombre;
         this.dni = dni;

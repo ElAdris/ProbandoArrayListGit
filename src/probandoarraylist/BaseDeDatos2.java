@@ -8,33 +8,15 @@ package probandoarraylist;
 import java.util.*;
 
 /**
- * RECORDATORIO --> TODOS LOS METODOS ESTAN HECHOS PARA PERSONAS NO PARA DOCUMENTOS
+ * RECORDATORIO -- TODOS LOS METODOS ESTAN HECHOS PARA PERSONAS NO PARA DOCUMENTOS.
+ * Todas las instancias de personas están hechas en Instanciador
  * @author Adrián José
  */
 public class BaseDeDatos2 {
     private static HashMap<String,Persona> personas = new HashMap<>();
     
     public BaseDeDatos2(){
-        /*--BIBLIOTECARIOS--*/
-        Bibliotecario b1 = new Bibliotecario("b1", "d1");
-        System.out.println(b1.getClave());
-        Bibliotecario b2 = new Bibliotecario("b2", "d2");
-        Bibliotecario b3 = new Bibliotecario("b3", "d3");
-        
-        /*--AÑADIDOS--*/
-        personas.put(b1.getDni(), b1);
-        personas.put(b2.getDni(), b2);
-        personas.put(b3.getDni(), b3);
-        
-        /*--CLIENTES--*/
-        Cliente c1 = new Cliente("c1", "d4");
-        Cliente c2 = new Cliente("c2", "d5");
-        Cliente c3 = new Cliente("c3", "d6");
-        
-        /*--AÑADIDOS--*/
-        personas.put(c1.getDni(), c1);
-        personas.put(c2.getDni(), c2);
-        personas.put(c3.getDni(), c3);
+        Instanciador ins = new Instanciador();
     }
     
     public void agregarPersonas(){
@@ -55,7 +37,14 @@ public class BaseDeDatos2 {
         
         System.out.println(" <-- ¿ AGREGADO ? --> " + '\n' + personas.containsKey(dni));
         System.out.println("\n" + personas.get(dni).toString());
+    }
+    
+    static public void agregarPersonas(Persona p){
+        Persona comprobante = personas.putIfAbsent(p.getDni(), p);
         
+        if(comprobante != null){
+            System.err.println(" <-- Ya existe en la base de datos --> ");
+        }
     }
     
     public void eliminar(){

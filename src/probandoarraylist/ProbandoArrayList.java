@@ -70,8 +70,4 @@ public class ProbandoArrayList {
         //bdd2.mostrarInformacion();
     }
 
-    void nuevoMetodo() {
-        System.out.println("este metodo es nuevo");
-    }
-
 }
