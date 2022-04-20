@@ -17,7 +17,6 @@ public class BaseDeDatos2 {
     public BaseDeDatos2(){
         /*--BIBLIOTECARIOS--*/
         Bibliotecario b1 = new Bibliotecario("b1", "d1");
-        System.out.println(b1.getContra());
         Bibliotecario b2 = new Bibliotecario("b2", "d2");
         Bibliotecario b3 = new Bibliotecario("b3", "d3");
         

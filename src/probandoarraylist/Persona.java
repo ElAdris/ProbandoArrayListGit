@@ -14,15 +14,10 @@ public abstract class Persona implements Comparable<Persona> {
 
     private String nombre;
     private String dni;
-    private HashMap<Persona, String> contras = new HashMap<>();
-    
     
     public Persona(String nombre, String dni) {
         this.nombre = nombre;
         this.dni = dni;
-        
-        int contra = nombre.hashCode();
-        this.contras.put(this , String.valueOf(contra));
     }
 
     public Persona(String nombre) {
@@ -46,10 +41,6 @@ public abstract class Persona implements Comparable<Persona> {
 
     public void setDni(String dni) {
         this.dni = dni;
-    }
-
-    public String getContra(){
-        return this.contras.get(this);
     }
     
     @Override
