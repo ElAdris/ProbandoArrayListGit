@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package probandoarraylist;
-import java.util.*;
 
 /**
  *
@@ -25,10 +24,6 @@ public abstract class Persona extends Claves implements Comparable<Persona> {
     public Persona(String nombre, String dni) {
         this.nombre = nombre;
         this.dni = dni;
-        
-        String clave = this.nombre + this.nombre.hashCode();
-        
-        super.asignarClave(dni, clave);
     }
 
     public Persona(String nombre) {
@@ -60,6 +55,10 @@ public abstract class Persona extends Claves implements Comparable<Persona> {
     
     public void setClave(String claveNueva){
         super.asignarClave(this.dni, claveNueva);
+    }
+    
+    public String crearClave(){
+        return this.nombre + this.nombre.hashCode();
     }
     
     @Override

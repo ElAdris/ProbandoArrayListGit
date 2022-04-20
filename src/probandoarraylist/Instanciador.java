@@ -22,6 +22,11 @@ public class Instanciador{
         Bibliotecario b2 = new Bibliotecario("b2", "d2");
         Bibliotecario b3 = new Bibliotecario("b3", "d3");
         
+        /*--CREAR CLAVES--*/
+        b1.asignarClave(b1.getDni(), b1.crearClave());
+        b2.asignarClave(b2.getDni(), b2.crearClave());
+        b3.asignarClave(b3.getDni(), b3.crearClave());
+        
         /*--AÑADIDOS--*/
         agregarPersonas(b1);
         agregarPersonas(b2);
@@ -32,9 +37,16 @@ public class Instanciador{
         Cliente c2 = new Cliente("c2", "d5");
         Cliente c3 = new Cliente("c3", "d6");      
 
+        /*--CREAR CLAVES--*/
+        c1.asignarClave(c1.getDni(), c1.crearClave());
+        c2.asignarClave(c2.getDni(), c2.crearClave());
+        c3.asignarClave(c3.getDni(), c3.crearClave());
+        
         /*--AÑADIDOS--*/
         agregarPersonas(c1);
         agregarPersonas(c2);
         agregarPersonas(c3);
+        
+        
     }
 }
