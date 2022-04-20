@@ -18,17 +18,17 @@ public class ProbandoArrayList {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+
         /*  DIRECTORES  */
-        /*
+ /*
         Director d1 = new Director("D1", "12D");
         System.out.println(d1.toString());
 
         ArrayList<Director> directores = new ArrayList<>();
         directores.add(d1);
-        */
-        /*  BIBLIOTECARIO   */
-        /*
+         */
+ /*  BIBLIOTECARIO   */
+ /*
         Bibliotecario b1 = new Bibliotecario("B1", "1234B");
         Bibliotecario b2 = new Bibliotecario("B2", "123B");
         System.out.println(b1.toString());
@@ -36,22 +36,22 @@ public class ProbandoArrayList {
         ArrayList<Bibliotecario> bibliotecarios = new ArrayList<>();
         bibliotecarios.add(b1);
         bibliotecarios.add(b2);
-        */
-        /*  BASE DE DATOS   */
-        /*
+         */
+ /*  BASE DE DATOS   */
+ /*
         BaseDeDatos bdd = new BaseDeDatos(directores, bibliotecarios);
-        */
-        /*  COMPROBANDO CUANTOS HAY */
-        /*
+         */
+ /*  COMPROBANDO CUANTOS HAY */
+ /*
         System.out.println(" ________________ ");
         System.out.println("|___Directores___|");
         System.out.println(bdd.getDirectores().size());
         System.out.println(" ____________________ ");
         System.out.println("|___Bibliotecarios___|");
         System.out.println(bdd.getBibliotecarios().size());
-        */
-        /*  ELIGIENDO EL ARRAYLIST A UTILIZAR   */
-        /*
+         */
+ /*  ELIGIENDO EL ARRAYLIST A UTILIZAR   */
+ /*
         try {
             Object[] lista = bdd.queLista().toArray();
             for (int i = 0; i < lista.length; i++) {
@@ -61,16 +61,19 @@ public class ProbandoArrayList {
             }
         } catch (NullPointerException nada) {
         }
-        */
-        
+         */
         BaseDeDatos2 bdd2 = new BaseDeDatos2();
         //bdd2.agregarPersonas();
         //bdd2.agregarPersonas();
         //bdd2.eliminar();
-        
+
         bdd2.mostrarInformacion();
-        
+
         System.out.println("Estoy haciendo un cambio para github");
+    }
+
+    void nuevoMetodo() {
+        System.out.println("este metodo es nuevo");
     }
 
 }
