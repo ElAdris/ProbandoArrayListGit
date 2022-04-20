@@ -67,7 +67,7 @@ public class ProbandoArrayList {
         //bdd2.agregarPersonas();
         //bdd2.eliminar();
 
-        bdd2.mostrarInformacion();
+        //bdd2.mostrarInformacion();
     }
 
     void nuevoMetodo() {

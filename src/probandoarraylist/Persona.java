@@ -10,7 +10,7 @@ import java.util.*;
  *
  * @author Adrián José
  */
-public abstract class Persona implements Comparable<Persona> {
+public abstract class Persona extends Claves implements Comparable<Persona> {
 
     private String nombre;
     private String dni;
@@ -18,6 +18,10 @@ public abstract class Persona implements Comparable<Persona> {
     public Persona(String nombre, String dni) {
         this.nombre = nombre;
         this.dni = dni;
+        
+        String clave = this.nombre + this.nombre.hashCode();
+        
+        super.asignarClave(dni, clave);
     }
 
     public Persona(String nombre) {
@@ -41,6 +45,14 @@ public abstract class Persona implements Comparable<Persona> {
 
     public void setDni(String dni) {
         this.dni = dni;
+    }
+    
+    public String getClave(){
+        return contras.get(this.dni);
+    }
+    
+    public void setClave(String claveNueva){
+        super.asignarClave(this.dni, claveNueva);
     }
     
     @Override

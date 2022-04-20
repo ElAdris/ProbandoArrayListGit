@@ -12,18 +12,19 @@ import java.util.*;
  * @author Adrián José
  */
 public class BaseDeDatos2 {
-    private final HashMap<String,Persona> personas = new HashMap<>();
+    private static HashMap<String,Persona> personas = new HashMap<>();
     
     public BaseDeDatos2(){
         /*--BIBLIOTECARIOS--*/
         Bibliotecario b1 = new Bibliotecario("b1", "d1");
+        System.out.println(b1.getClave());
         Bibliotecario b2 = new Bibliotecario("b2", "d2");
         Bibliotecario b3 = new Bibliotecario("b3", "d3");
         
         /*--AÑADIDOS--*/
-        this.personas.put(b1.getDni(), b1);
-        this.personas.put(b2.getDni(), b2);
-        this.personas.put(b3.getDni(), b3);
+        personas.put(b1.getDni(), b1);
+        personas.put(b2.getDni(), b2);
+        personas.put(b3.getDni(), b3);
         
         /*--CLIENTES--*/
         Cliente c1 = new Cliente("c1", "d4");
@@ -31,9 +32,9 @@ public class BaseDeDatos2 {
         Cliente c3 = new Cliente("c3", "d6");
         
         /*--AÑADIDOS--*/
-        this.personas.put(c1.getDni(), c1);
-        this.personas.put(c2.getDni(), c2);
-        this.personas.put(c3.getDni(), c3);
+        personas.put(c1.getDni(), c1);
+        personas.put(c2.getDni(), c2);
+        personas.put(c3.getDni(), c3);
     }
     
     public void agregarPersonas(){
@@ -50,10 +51,10 @@ public class BaseDeDatos2 {
         p.setDni(dni);
         p.setNombre(nombre);
         
-            this.personas.put(dni, p);
+            personas.put(dni, p);
         
-        System.out.println(" <-- ¿ AGREGADO ? --> " + '\n' + this.personas.containsKey(dni));
-        System.out.println("\n" + this.personas.get(dni).toString());
+        System.out.println(" <-- ¿ AGREGADO ? --> " + '\n' + personas.containsKey(dni));
+        System.out.println("\n" + personas.get(dni).toString());
         
     }
     
@@ -67,13 +68,13 @@ public class BaseDeDatos2 {
         
         String decision = "";
         
-        if(!this.personas.containsKey(dniAeliminar)){
+        if(!personas.containsKey(dniAeliminar)){
             System.err.println(" <-- No existe --> ");
         }
         else{
             
             System.out.println("<-- ¿Seguro de querer eliminar? --> \n" 
-                    + this.personas.get(dniAeliminar) + "si o no");
+                    + personas.get(dniAeliminar) + "si o no");
             
             boolean correcto = false;
             while(!correcto)
@@ -82,7 +83,7 @@ public class BaseDeDatos2 {
             
                 switch(decision.toLowerCase().replace(" ", "")){
                     case "si":case"s":
-                        this.personas.remove(dniAeliminar);
+                        personas.remove(dniAeliminar);
                         System.out.println(" <-- Eliminado --> ");
                         correcto = true;
                         break;
@@ -132,12 +133,12 @@ public class BaseDeDatos2 {
         
         System.out.println(" <-- Filtrado por : " + clase + "s -->");
         
-        Object[] dnis = this.personas.keySet().toArray();
+        Object[] dnis = personas.keySet().toArray();
         
         for(int i = 0 ; i < dnis.length ; i++){
 
-            if(filtrado.getClass().equals(this.personas.get(dnis[i]).getClass())){
-                System.out.println(this.personas.get(dnis[i]));
+            if(filtrado.getClass().equals(personas.get(dnis[i]).getClass())){
+                System.out.println(personas.get(dnis[i]));
             }
 
         }
@@ -161,7 +162,7 @@ public class BaseDeDatos2 {
                     correcto = true;
                     break;
                 case "n": case "no":
-                    System.out.println(this.personas.values().toString());
+                    System.out.println(personas.values().toString());
                     
                     correcto = true;
                     break;
