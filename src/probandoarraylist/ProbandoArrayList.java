@@ -69,6 +69,8 @@ public class ProbandoArrayList {
         //bdd2.eliminar();
         
         bdd2.mostrarInformacion();
+        
+        System.out.println("Estoy haciendo un cambio para github");
     }
 
 }
