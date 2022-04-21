@@ -49,11 +49,11 @@ public abstract class Persona extends Claves implements Comparable<Persona> {
         this.dni = dni;
     }
     
-    public String getClave(){
+    public String obtenerClave(){
         return contras.get(this.dni);
     }
     
-    public void setClave(String claveNueva){
+    public void cambiarClave(String claveNueva){
         super.asignarClave(this.dni, claveNueva);
     }
     
