@@ -162,6 +162,10 @@ public class BaseDeDatos2 {
         }
     }
     
+    public <T> T buscar(String identificador){
+        return (T) personas.getOrDefault(identificador, null);
+    }
+    
     public Object bddDocumento(){
         String decision = "";
         System.out.println("-- Que deseas?? --");
