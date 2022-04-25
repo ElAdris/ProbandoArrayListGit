@@ -62,12 +62,13 @@ public class ProbandoArrayList {
         } catch (NullPointerException nada) {
         }
          */
-        BaseDeDatos2 bdd2 = new BaseDeDatos2();
+        //BaseDeDatos2 bdd2 = new BaseDeDatos2();
         //bdd2.agregarPersonas();
         //bdd2.agregarPersonas();
         //bdd2.eliminar();
 
         //bdd2.mostrarInformacion();
+        Inicio l = new Inicio();
     }
 
 }
