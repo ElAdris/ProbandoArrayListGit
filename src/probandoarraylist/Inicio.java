@@ -11,6 +11,8 @@ package probandoarraylist;
  */
 public class Inicio extends BaseDeDatos2{
     public Inicio(){
+        Instanciador ins = new Instanciador();
+        
         boolean finalizar = false;
         String decision,dni,contra,nombre;
         System.out.println(" <-- BIENVENIDO!! --> ");
@@ -95,6 +97,8 @@ public class Inicio extends BaseDeDatos2{
             nuevo = new Cliente(nombre,dni);
             agregarPersonas(nuevo);
             nuevo.asignarClave(nuevo.getDni(), nuevo.crearClave());
+            
+            System.out.println(" <-- Registrado correctamente --> ");
         }   else{
             System.err.println(" <-- Ya existe en la base de datos --> ");
         }
