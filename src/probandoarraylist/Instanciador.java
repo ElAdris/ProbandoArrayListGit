@@ -5,12 +5,11 @@
  */
 package probandoarraylist;
 
-import static probandoarraylist.BaseDeDatos2.agregarPersonas;
 /**
  * Clase que contiene las estancias para la base de datos
  * @author Adrián José
  */
-public class Instanciador{
+public class Instanciador extends BaseDeDatos2{
     
     /**
      * Para poder asignar la instancia a la base de datos
@@ -28,9 +27,9 @@ public class Instanciador{
         b3.asignarClave(b3.getDni(), b3.crearClave());
         
         /*--AÑADIDOS--*/
-        agregarPersonas(b1);
-        agregarPersonas(b2);
-        agregarPersonas(b3);
+        super.agregarPersonas(b1);
+        super.agregarPersonas(b2);
+        super.agregarPersonas(b3);
         
         /*--CLIENTES--*/
         Cliente c1 = new Cliente("c1", "d4");
@@ -43,10 +42,9 @@ public class Instanciador{
         c3.asignarClave(c3.getDni(), c3.crearClave());
         
         /*--AÑADIDOS--*/
-        agregarPersonas(c1);
-        agregarPersonas(c2);
-        agregarPersonas(c3);
-        
-        
+        super.agregarPersonas(c1);
+        super.agregarPersonas(c2);
+        super.agregarPersonas(c3);
+   
     }
 }
