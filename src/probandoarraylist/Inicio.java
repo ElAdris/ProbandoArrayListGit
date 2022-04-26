@@ -6,7 +6,8 @@
 package probandoarraylist;
 
 /**
- *
+ * Clase con la que se inicia la aplicación, y se llama al constructor de 
+ * Instanciador, para poder generar los datos iniciales
  * @author Adrián José
  */
 public class Inicio extends BaseDeDatos2{
