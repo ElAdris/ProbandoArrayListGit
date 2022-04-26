@@ -89,10 +89,15 @@ public class Inicio extends BaseDeDatos2{
     }
     
     private void registrarse(String nombre, String dni){
-        Cliente creado = (Cliente) buscar(dni);
+        Persona nuevo = buscar(dni);
         
-        agregarPersonas(creado);
-        creado.asignarClave(creado.getDni(), creado.crearClave());
+        if(nuevo == null){
+            nuevo = new Cliente(nombre,dni);
+            agregarPersonas(nuevo);
+            nuevo.asignarClave(nuevo.getDni(), nuevo.crearClave());
+        }   else{
+            System.err.println(" <-- Ya existe en la base de datos --> ");
+        }
         
     }
 }
