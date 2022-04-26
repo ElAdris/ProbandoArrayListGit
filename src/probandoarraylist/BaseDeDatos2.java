@@ -9,14 +9,14 @@ import java.util.*;
 
 /**
  * RECORDATORIO -- TODOS LOS METODOS ESTAN HECHOS PARA PERSONAS NO PARA DOCUMENTOS.
- * Todas las instancias de personas están hechas en Instanciador
+ * Todas las instancias están hechas en Instanciador
  * @author Adrián José
+ * @see probandoarraylist.Instanciador
  */
 public class BaseDeDatos2 {
     private static HashMap<String,Persona> personas = new HashMap<>();
     
     public BaseDeDatos2(){
-        Instanciador ins = new Instanciador();
     }
     
     public void agregarPersonas(){
@@ -39,7 +39,7 @@ public class BaseDeDatos2 {
         System.out.println("\n" + personas.get(dni).toString());
     }
     
-    static public void agregarPersonas(Persona p){
+    public void agregarPersonas(Persona p){
         Persona comprobante = personas.putIfAbsent(p.getDni(), p);
         
         if(comprobante != null){
