@@ -15,7 +15,8 @@ public class Instanciador extends BaseDeDatos2{
     
     /**
      * Para poder asignar la instancia a la base de datos
-     * hay que llamar al método agregarPersonas, de la clase base de datos
+     * hay que llamar al método agregarPersonas, de la clase BaseDeDatos2
+     * @see probandoarraylist.basededatos2
      */
     public Instanciador(){
         /*--BIBLIOTECARIOS--*/
