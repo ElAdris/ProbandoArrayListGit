@@ -6,8 +6,10 @@
 package probandoarraylist;
 
 /**
- * Clase que contiene las estancias para la base de datos
+ * Clase que contiene las estancias para la base de datos.
+ * Todas las instancias están hechas en Instanciador
  * @author Adrián José
+ * @see probandoarraylist.Instanciador
  */
 public class Instanciador extends BaseDeDatos2{
     
