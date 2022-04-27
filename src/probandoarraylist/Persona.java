@@ -5,6 +5,8 @@
  */
 package probandoarraylist;
 
+import java.util.Objects;
+
 /**
  *
  * @author Adrián José
@@ -63,6 +65,30 @@ public abstract class Persona extends Claves implements Comparable<Persona> {
     
     @Override
     public abstract int compareTo(Persona arg0);
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 13 * hash + Objects.hashCode(this.nombre);
+        hash = 13 * hash + Objects.hashCode(this.dni);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (this.getClass() != obj.getClass()) {
+            return false;
+        }
+        
+        final Persona other = (Persona) obj;
+        if (!Objects.equals(this.dni, other.dni)) {
+            return false;
+        }
+        return true;
+    }
 
     @Override
     public String toString() {
