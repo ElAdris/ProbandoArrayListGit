@@ -39,12 +39,10 @@ public class BaseDeDatos2 {
         System.out.println("\n" + personas.get(dni).toString());
     }
     
-    public void agregarPersonas(Persona p){
+    public boolean agregarPersonas(Persona p){
         Persona comprobante = personas.putIfAbsent(p.getDni(), p);
-        
-        if(comprobante != null){
-            System.err.println(" <-- Ya existe en la base de datos --> ");
-        }
+
+        return comprobante == null;
     }
     
     public void eliminar(){
