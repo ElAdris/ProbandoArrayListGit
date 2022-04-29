@@ -86,6 +86,11 @@ public class BaseDeDatos2 {
         }
     }
     
+    /**
+     * Método que te permite elegir qué instancia de persona necesitas.
+     * Funciona en bucle hasta que se elija una opción valida.
+     * @return Persona del tipo elegido
+     */
     public Persona bddPersona(){
         String decision = "";
         boolean correcto = false;
