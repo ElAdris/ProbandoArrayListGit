@@ -76,6 +76,8 @@ public abstract class Persona extends Claves implements Comparable<Persona> {
 
     @Override
     public boolean equals(Object obj) {
+        final Persona other = (Persona) obj;
+        
         if (obj == null) {
             return false;
         }
@@ -83,7 +85,6 @@ public abstract class Persona extends Claves implements Comparable<Persona> {
             return false;
         }
         
-        final Persona other = (Persona) obj;
         if (!Objects.equals(this.dni, other.dni)) {
             return false;
         }
